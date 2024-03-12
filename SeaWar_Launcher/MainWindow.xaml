@@ -55,5 +55,8 @@
                 </Image>
             </StackPanel>
         </Grid>
+        <Grid Name="LogoContainer" Grid.Row="1">
+            <Image Source="/Source/SeaWar-logo.png"/>
+        </Grid>
     </Grid>
 </Window>
