@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeaWar_Launcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="515" Width="365" WindowStyle="None">
+        Title="MainWindow" Height="515" Width="365" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF021830"/>
+            <GradientStop Color="#FF062A45" Offset="1"/>
+            <GradientStop Color="#FF011B34" Offset="0.5"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="85"/>
+        </Grid.RowDefinitions>
+        <Grid Name="ToolBar" Grid.Row="0">
+            <Polygon Fill="White" Opacity="0.2"
+                 Points="107,0,
+                 115,7,
+                 249,7
+                 257,0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image Name="MinButton" Height="20" Width="20" Margin="5">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Source/remove-outline.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=MinButton}"
+                                             Value="True">
+                                    <Setter Property="Source" Value="/Source/remove-outline-active.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                 </Image>
+                <Image Name="ExitButton" Height="20" Width="20" Margin="5,5,10,5" >
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Source/close-outline.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=ExitButton}"
+                                             Value="True">
+                                    <Setter Property="Source" Value="/Source/close-outline-active.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

@@ -94,5 +94,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Source\close-outline-active.png" />
+    <Resource Include="Source\close-outline.png" />
+    <Resource Include="Source\remove-outline-active.png" />
+    <Resource Include="Source\remove-outline.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
