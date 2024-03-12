@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeaWar_Launcher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="515" Width="365" WindowStyle="None" ResizeMode="NoResize">
+        Title="MainWindow" Height="515" Width="365" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF021830"/>
@@ -20,14 +20,14 @@
             <RowDefinition Height="300"/>
             <RowDefinition Height="85"/>
         </Grid.RowDefinitions>
-        <Grid Name="ToolBar" Grid.Row="0">
+        <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
             <Polygon Fill="White" Opacity="0.2"
                  Points="107,0,
                  115,7,
                  249,7
                  257,0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Image Name="MinButton" Height="20" Width="20" Margin="5">
+                <Image Name="MinButton" Height="20" Width="20" Margin="5" MouseDown="MinButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="/Source/remove-outline.png"/>
@@ -40,7 +40,7 @@
                         </Style>
                     </Image.Style>
                  </Image>
-                <Image Name="ExitButton" Height="20" Width="20" Margin="5,5,10,5" >
+                <Image Name="ExitButton" Height="20" Width="20" Margin="5,5,10,5" MouseDown="ExitButton_MouseDown" >
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="/Source/close-outline.png"/>
@@ -55,7 +55,7 @@
                 </Image>
             </StackPanel>
         </Grid>
-        <Grid Name="LogoContainer" Grid.Row="1">
+        <Grid Name="LogoContainer" Background="Transparent" Grid.Row="1" MouseDown="LogoContainer_MouseDown">
             <Image Source="/Source/SeaWar-logo.png"/>
         </Grid>
     </Grid>
