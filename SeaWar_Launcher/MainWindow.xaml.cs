@@ -50,5 +50,49 @@ namespace SeaWar_Launcher
                 this.DragMove();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (LeftGrid.Visibility == Visibility.Hidden)
+                LeftGrid.Visibility = Visibility.Visible;
+            else
+                LeftGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (RightGrid.Visibility == Visibility.Hidden)
+                RightGrid.Visibility = Visibility.Visible;
+            else
+                RightGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (Country.Text != "Россия")
+                Country.Text = "Россия";
+            LeftGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (Country.Text != "Китай")
+                Country.Text = "Китай";
+            LeftGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            if (Country.Text != "Америка")
+                Country.Text = "Америка";
+            LeftGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            if (Country.Text != "Европа")
+                Country.Text = "Европа";
+            LeftGrid.Visibility = Visibility.Hidden;
+        }
     }
 }
