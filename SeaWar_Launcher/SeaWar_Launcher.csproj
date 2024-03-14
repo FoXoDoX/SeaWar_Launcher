@@ -103,5 +103,15 @@
     <Resource Include="Source\remove-outline-active.png" />
     <Resource Include="Source\remove-outline.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\globe-active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\globe-not-active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\chevron-down-outline-active.png" />
+    <Resource Include="Source\chevron-down-outline-not-active.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
